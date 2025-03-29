@@ -35,9 +35,9 @@ type ComponentDefinition = Partial<
 const components: ComponentDefinition[] = [
     {
         name: "component",
-        path: path.join(__dirname, "../src/components/ui/persian-date-picker.tsx"),
-        registryDependencies: ["button", "input"],
-        dependencies: ["lucide-react"],
+        path: path.join(__dirname, "../src/components/ui/persian-calendar.tsx"),
+        registryDependencies: ["button"],
+        dependencies: ["lucide-react", "date-fns@4.1.0", "react-day-picker@9.5.0"],
         cssVars: {
             light: {},
             dark: {},
