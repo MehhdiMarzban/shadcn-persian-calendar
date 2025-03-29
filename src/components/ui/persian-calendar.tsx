@@ -353,4 +353,4 @@ function PersianCalendar({
 
 PersianCalendar.displayName = "PersianCalendar";
 
-export { PersianCalendar as Calendar };
+export { PersianCalendar };
