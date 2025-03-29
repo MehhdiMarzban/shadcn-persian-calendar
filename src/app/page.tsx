@@ -20,7 +20,7 @@ export default function Home() {
                     </li>
                     <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
                         npx shadcn add
-                        https://shadcn-persian-calendar.mehdi-marzban.ir/component.json
+                        https://shadcn-persian-calendar.mehdi-marzban.ir/persian-calendar.json
                     </code>
                 </div>
             </main>
