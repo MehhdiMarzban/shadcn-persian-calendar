@@ -34,7 +34,7 @@ type ComponentDefinition = Partial<
 // Define the components and their dependencies that should be registered
 const components: ComponentDefinition[] = [
     {
-        name: "component",
+        name: "persian-calendar",
         path: path.join(__dirname, "../src/components/ui/persian-calendar.tsx"),
         registryDependencies: ["button"],
         dependencies: ["lucide-react", "date-fns@4.1.0", "react-day-picker@9.5.0"],
