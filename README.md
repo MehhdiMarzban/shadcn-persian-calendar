@@ -17,25 +17,12 @@ Check out the live demo: [https://shadcn-persian-calendar.mehdi-marzban.ir/](htt
 - 📱 Responsive design
 - 🔄 Year switcher
 - 📅 Single date, range, and multiple date selection modes
-- 🚫 Disabled dates and custom date validation
 - 🌐 RTL support
 
 ## Installation
 
 ```bash
-npm install shadcn-persian-date-picker
-```
-
-or
-
-```bash
-yarn add shadcn-persian-date-picker
-```
-
-or 
-
-```bash
-pnpm add shadcn-persian-date-picker
+npx shadcn add https://shadcn-persian-calendar.mehdi-marzban.ir/persian-calendar.json
 ```
 
 ## Prerequisites
@@ -54,7 +41,7 @@ npm install @radix-ui/react-slot lucide-react react-day-picker date-fns
 "use client";
 
 import { useState } from "react";
-import { PersianCalendar } from "shadcn-persian-date-picker";
+import { PersianCalendar } from "@/components/ui/persian-calendar";
 
 export default function Home() {
   const [date, setDate] = useState<Date | undefined>(new Date());
@@ -67,44 +54,6 @@ export default function Home() {
         onSelect={setDate}
         className="rounded-md border"
       />
-      
-      <p className="mt-4">
-        Selected date: {date ? date.toLocaleDateString('fa-IR') : 'None'}
-      </p>
-    </div>
-  );
-}
-```
-
-### Date Range Selection
-
-```tsx
-"use client";
-
-import { useState } from "react";
-import { PersianCalendar } from "shadcn-persian-date-picker";
-import { DateRange } from "react-day-picker";
-
-export default function RangeExample() {
-  const [dateRange, setDateRange] = useState<DateRange | undefined>({
-    from: new Date(),
-    to: new Date(new Date().setDate(new Date().getDate() + 7))
-  });
-
-  return (
-    <div className="flex min-h-screen flex-col items-center justify-center p-4">
-      <PersianCalendar
-        mode="range"
-        selected={dateRange}
-        onSelect={setDateRange}
-        className="rounded-md border"
-        numberOfMonths={2}
-      />
-      
-      <p className="mt-4">
-        Selected range: {dateRange?.from ? dateRange.from.toLocaleDateString('fa-IR') : 'None'} 
-        {dateRange?.to ? ` to ${dateRange.to.toLocaleDateString('fa-IR')}` : ''}
-      </p>
     </div>
   );
 }
